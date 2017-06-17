@@ -1,0 +1,34 @@
+subprojects {
+
+    group 'com.cnblogs.yjmyzz'
+    version '0.0.1-SNAPSHOT'
+
+    apply plugin: 'groovy'
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'maven'
+
+    targetCompatibility = 1.8
+    sourceCompatibility = 1.8
+
+    [compileJava, compileTestJava].each() {
+        it.options.encoding = "UTF-8"
+    }
+
+    repositories {
+        maven {
+            url "http://maven.aliyun.com/nexus/content/groups/public/"
+        }
+    }
+
+    configurations.all {
+        resolutionStrategy.cacheChangingModulesFor 1, "minutes"
+    }
+
+    dependencies {
+        compile "org.projectlombok:lombok:1.16.12"
+        compile 'org.codehaus.groovy:groovy-all:2.4.9'
+        testCompile "junit:junit:4.11"
+    }
+
+}
