@@ -1,13 +1,17 @@
 server:
-  port: 8002
+  port: 8001
 
 spring:
   application:
     name: "service-provider-demo"
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://localhost:8000/eureka/
+
+
 
 
 

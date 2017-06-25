@@ -7,6 +7,8 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
+//import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+
 /**
  * Created by yangjunming on 2017/6/17.
  */

@@ -3,7 +3,7 @@ subprojects {
     group 'com.cnblogs.yjmyzz'
     version '0.0.1-SNAPSHOT'
 
-    apply plugin: 'groovy'
+//    apply plugin: 'groovy'
     apply plugin: 'java'
     apply plugin: 'idea'
     apply plugin: 'maven'
@@ -27,7 +27,7 @@ subprojects {
 
     dependencies {
         compile "org.projectlombok:lombok:1.16.12"
-        compile 'org.codehaus.groovy:groovy-all:2.4.9'
+//        compile 'org.codehaus.groovy:groovy-all:2.4.9'
         testCompile "junit:junit:4.11"
     }
 
