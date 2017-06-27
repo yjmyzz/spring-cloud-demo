@@ -3,3 +3,10 @@ spring:
     name: eureka-server-cluster
   profiles:
     active: server1
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: yjmyzz
+    password: 123456
