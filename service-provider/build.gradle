@@ -22,5 +22,6 @@ dependencies {
     compile 'org.springframework.cloud:spring-cloud-starter-eureka'
     compile 'org.springframework.boot:spring-boot-starter-actuator'
     compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-security'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
