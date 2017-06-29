@@ -1,18 +1,18 @@
 package com.cnblogs.yjmyzz.spring.cloud.study.service.client;
 
-import com.cnblogs.yjmyzz.spring.cloud.study.api.UserService;
 import com.cnblogs.yjmyzz.spring.cloud.study.dto.UserDTO;
 import org.springframework.cloud.netflix.feign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * Created by yangjunming on 2017/6/28.
  */
 @FeignClient(name = "service-provider-demo", configuration = BasicAuthConfiguration.class)
-public interface UserFeignClient extends UserService {
+public interface UserFeignClient {
 
-    @GetMapping(value = "/user/{id}")
+    @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
     UserDTO findUser(@PathVariable("id") Integer userId);
 
 }
