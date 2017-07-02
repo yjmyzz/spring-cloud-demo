@@ -3,4 +3,5 @@ include 'register-center'
 include 'service-api'
 include 'service-provider'
 include 'service-consumer'
+include 'hystrix-dashboard'
 

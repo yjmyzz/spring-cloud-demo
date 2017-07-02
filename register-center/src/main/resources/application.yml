@@ -10,3 +10,7 @@ security:
   user:
     name: yjmyzz
     password: 123456
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 5

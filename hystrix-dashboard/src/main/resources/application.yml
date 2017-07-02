@@ -1,33 +1,14 @@
-server:
-  port: 8002
-
 spring:
   application:
-    name: "service-consumer-demo"
+    name: hystrix-dashboard
+server:
+  port: 8035
+
+
 eureka:
   instance:
     prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://yjmyzz:123456@server1:8100/eureka,http://yjmyzz:123456@server2:8200/eureka,http://yjmyzz:123456@server3:8300/eureka
-
-
-security:
-  basic:
-    enabled: false
-
-
-management:
-  security:
-    enabled: false
-
-feign:
-  hystrix:
-    enabled: false
-
-
-
-
-
-
 
