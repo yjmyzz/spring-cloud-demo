@@ -2,7 +2,7 @@ spring:
   application:
     name: hystrix-dashboard
 server:
-  port: 8035
+  port: 8003
 
 
 eureka:
