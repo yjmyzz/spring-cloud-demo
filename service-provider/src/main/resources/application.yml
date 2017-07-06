@@ -17,3 +17,7 @@ security:
   user:
     name: app01
     password: passwd01
+
+management:
+  security:
+    enabled: false

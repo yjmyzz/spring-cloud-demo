@@ -8,8 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://git.oschina.net/itmuch/spring-cloud-config-repo
-#          uri: https://github.com/yjmyzz/spring-cloud-demo/tree/master/config-repository
+          uri: https://github.com/yjmyzz/spring-cloud-config-repository
 #          username: *****
 #          password: *****
 
