@@ -1,6 +1,6 @@
 spring:
   application:
-    name: eureka-server-cluster
+    name: eureka-server
   profiles:
     active: server1
 
