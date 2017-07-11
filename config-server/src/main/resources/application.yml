@@ -7,6 +7,8 @@ spring:
     config:
       server:
         git:
+#          uri: http://gitlab.mwbyd.cn:10080/yangjunming/dubbo-demo.git
+#          default-label: dev
           uri: https://github.com/yjmyzz/spring-cloud-config-repository
 #          username: *****
 #          password: *****

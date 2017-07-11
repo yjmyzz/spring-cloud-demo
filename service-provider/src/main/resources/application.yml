@@ -3,6 +3,15 @@ spring:
     name: "service-provider"
   profiles:
     active: port1
+  cloud:
+    stream:
+      default-binder: kafka
+      kafka:
+        binder:
+          brokers: localhost
+          zkNodes: localhost
+          defaultZkPort: 2181
+          defaultBrokerPort: 9092
 
 eureka:
   instance:
