@@ -24,33 +24,4 @@ public class ServiceGateway {
         new SpringApplicationBuilder(ServiceGateway.class).web(true).run(args);
     }
 
-    @Bean
-    public AccessFilter accessFilter() {
-        return new AccessFilter();
-    }
-
-
-    @Configuration
-    @Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
-    protected static class SecurityConfiguration extends WebSecurityConfigurerAdapter {
-
-        @Autowired
-        public void globalUserDetails(AuthenticationManagerBuilder auth) throws Exception {
-            auth.inMemoryAuthentication()
-                    .withUser("app01").password("passwd01").roles("USER");
-        }
-
-        @Override
-        protected void configure(HttpSecurity http) throws Exception {
-            http.httpBasic().and()
-                    .logout().and()
-                    .authorizeRequests()
-                    .antMatchers("/api-order", "/").permitAll()
-                    .anyRequest().authenticated()
-                    .and()
-                    .csrf()
-                    .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
-
-        }
-    }
 }

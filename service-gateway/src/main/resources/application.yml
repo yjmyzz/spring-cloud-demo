@@ -26,6 +26,8 @@ zuul:
     api-a:
       path: /api-user/**
       service-id: service-provider
+      sensitive-headers:
     api-b:
       path: /api-order/**
       service-id: service-consumer
+
