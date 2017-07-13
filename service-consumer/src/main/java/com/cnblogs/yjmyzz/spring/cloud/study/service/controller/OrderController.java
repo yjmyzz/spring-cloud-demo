@@ -24,7 +24,7 @@ public class OrderController {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")
     })
     public String findOrder(@PathVariable Integer userId, @PathVariable String orderNo) throws InterruptedException {
-        Thread.sleep(rnd.nextInt(2000));
+//        Thread.sleep(rnd.nextInt(1200));
         UserDTO user = userFeignClient.findUser(userId);
         if (user != null) {
             return user.getUserName() + " 的订单" + orderNo + " 找到啦！";

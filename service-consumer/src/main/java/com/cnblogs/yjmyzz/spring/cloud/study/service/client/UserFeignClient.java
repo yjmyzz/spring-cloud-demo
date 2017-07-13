@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@FeignClient(name = "service-provider-demo", configuration = BasicAuthConfiguration.class)
+@FeignClient(name = "service-provider", configuration = BasicAuthConfiguration.class)
 public interface UserFeignClient {
 
     @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)

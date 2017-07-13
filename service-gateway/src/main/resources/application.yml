@@ -1,9 +1,6 @@
-server:
-  port: 8002
-
 spring:
   application:
-    name: "service-consumer"
+    name: "service-gateway"
 
 eureka:
   instance:
@@ -13,23 +10,22 @@ eureka:
     service-url:
       defaultZone: http://yjmyzz:123456@server1:8100/eureka,http://yjmyzz:123456@server2:8200/eureka
 
-
 security:
   basic:
     enabled: false
-
 
 management:
   security:
     enabled: false
 
-feign:
-  hystrix:
-    enabled: false
+server:
+  port: 8040
 
-
-
-
-
-
-
+zuul:
+  routes:
+    api-a:
+      path: /api-user/**
+      service-id: service-provider
+    api-b:
+      path: /api-order/**
+      service-id: service-consumer
