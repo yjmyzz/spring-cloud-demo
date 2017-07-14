@@ -21,6 +21,11 @@ management:
 server:
   port: 8040
 
+logging:
+  level:
+   root: INFO
+   org.springframework.cloud.sleuth: DEBUG
+
 zuul:
   routes:
     api-a:

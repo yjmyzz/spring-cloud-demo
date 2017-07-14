@@ -5,7 +5,5 @@ include 'service-provider'
 include 'service-consumer'
 include 'hystrix-dashboard'
 include 'config-server'
-include 'config-repository'
 include 'service-gateway'
-include 'zipkin-server'
 

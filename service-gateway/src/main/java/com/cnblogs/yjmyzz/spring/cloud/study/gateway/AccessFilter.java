@@ -37,7 +37,6 @@ public class AccessFilter extends ZuulFilter {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
 
-
         Object token = request.getParameter("token");
 
         if (token == null) {
@@ -47,14 +46,12 @@ public class AccessFilter extends ZuulFilter {
             return null;
         }
 
-
-        ctx.addZuulRequestHeader("Authorization",
-                "Basic " + getBase64Credentials("app01", "passwd01"));
+        ctx.addZuulRequestHeader("Authorization", "Basic " + getBase64Credentials("app01", "passwd01"));
 
         return null;
     }
 
-    private String getBase64Credentials(String username,String password){
+    private String getBase64Credentials(String username, String password) {
         String plainCreds = username + ":" + password;
         byte[] plainCredsBytes = plainCreds.getBytes();
         byte[] base64CredsBytes = Base64.encodeBase64(plainCredsBytes);

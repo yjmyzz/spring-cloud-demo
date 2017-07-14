@@ -31,3 +31,8 @@ security:
 management:
   security:
     enabled: false
+
+logging:
+  level:
+   root: INFO
+   org.springframework.cloud.sleuth: DEBUG
