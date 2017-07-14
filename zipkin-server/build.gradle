@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        maven {
+            url "http://maven.aliyun.com/nexus/content/groups/public/"
+        }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.4.RELEASE")
+    }
+}
+
+apply plugin: 'org.springframework.boot'
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:Dalston.RELEASE"
+    }
+}
+
+dependencies {
+    compile 'org.springframework.cloud:spring-cloud-starter-eureka'
+    compile 'org.springframework.cloud:spring-cloud-starter-sleuth'
+    compile 'org.springframework.cloud:spring-cloud-sleuth-zipkin'
+    compile 'io.zipkin.java:zipkin-server'
+    compile 'io.zipkin.java:zipkin-autoconfigure-ui'
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+}
