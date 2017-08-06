@@ -1,0 +1,8 @@
+server:
+  port: 8201
+
+eureka:
+  instance:
+    metadata-map:
+      gated-launch: false
+

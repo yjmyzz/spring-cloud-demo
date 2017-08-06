@@ -1,9 +1,8 @@
-server:
-  port: 8002
-
 spring:
   application:
     name: "service-consumer"
+  profiles:
+    active: normal
 
 eureka:
   instance:

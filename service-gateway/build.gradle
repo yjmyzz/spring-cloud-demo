@@ -25,5 +25,6 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-actuator'
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-security'
+    compile 'io.jmnarloch:ribbon-discovery-filter-spring-cloud-starter:2.1.0'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
